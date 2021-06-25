@@ -1,0 +1,55 @@
+img {
+    width: 80%;
+    /*display: block;*/
+    margin: 0 9%;
+}
+
+html {
+    font-size: 20px;
+    font-family: 'Viaoda Libre', cursive;
+    background-color: #00539F;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    margin: 0%;
+    padding: 10px 100px;
+    color: #00539F;
+    text-shadow: 4px 3px 4px chartreuse;
+}
+
+h2 {
+    text-align: center;
+    line-height: 1;
+    color: blanchedalmond;
+}
+
+li {
+    font-size: 20px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+p {
+    margin: 1 auto;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(18, 4, 138);
+}
+
+body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #FF9500;
+    padding: 0px 30px 5px;
+    border: 8px solid rgb(245, 11, 253);
+}
+h3{
+    color: red;
+}
+#change
+{
+    font-size: 15px;
+    color: rgb(0, 255, 0);
+}
