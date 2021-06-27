@@ -1,2 +1,2 @@
-# th3ka1ki.github.io
+# the-kalki.github.io
 My first web page hosted with the help of GitHub.
