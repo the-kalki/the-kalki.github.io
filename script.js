@@ -7,26 +7,33 @@ function createBubble(x, y) {
   const bubble = document.createElement("div");
   bubble.classList.add("bubble");
 
-  // Set random size
-  const size = Math.random() * 20 + 10; // Size between 10px and 30px
-  bubble.style.width = `${size}px`;
-  bubble.style.height = `${size}px`;
+  // Set random size (smaller than before)
+  const size = Math.random() * 1.5 + 0.5; // Size between 0.5vw and 2vw
+  bubble.style.width = `${size}vw`;
+  bubble.style.height = `${size}vw`;
 
   // Set initial position at the cursor
   bubble.style.left = `${x}px`;
   bubble.style.top = `${y}px`;
 
   // Randomize movement offsets
-  const scatterX = (Math.random() - 0.5) * 200; // Scatter range in X direction
-  const scatterY = (Math.random() - 1) * 200; // Scatter range in Y direction (upwards)
+  const scatterX = (Math.random() - 0.5) * 200;
+  const scatterY = (Math.random() - 1) * 200;
 
   // Set CSS custom properties for animation
   bubble.style.setProperty("--scatter-x", `${scatterX}px`);
   bubble.style.setProperty("--scatter-y", `${scatterY}px`);
 
   // Set random animation duration
-  const duration = Math.random() * 2 + 1; // Duration between 1s and 3s
+  const duration = Math.random() * 2 + 1;
   bubble.style.animation = `scatter ${duration}s forwards`;
+
+  // Set random color
+  const hue = Math.floor(Math.random() * 360); // Random hue
+  const saturation = Math.floor(Math.random() * 30 + 70); // 70-100% saturation
+  const lightness = Math.floor(Math.random() * 20 + 70); // 70-90% lightness
+  const alpha = Math.random() * 0.3 + 0.2; // 0.2-0.5 opacity
+  bubble.style.backgroundColor = `hsla(${hue}, ${saturation}%, ${lightness}%, ${alpha})`;
 
   bubblesContainer.appendChild(bubble);
 
@@ -56,6 +63,7 @@ document.addEventListener("mousemove", (event) => {
   }
 });
 
+// Link Hover effects
 // Link Hover effects
 function getRandomColor() {
   const r = Math.floor(Math.random() * 256);
