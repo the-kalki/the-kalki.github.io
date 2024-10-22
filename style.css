@@ -62,6 +62,7 @@ h1 {
 .links-circle {
     --total-links: 6;
     --radius: 280px;
+    --start-angle: -90deg;
     position: absolute;
     top: 0;
     left: 0;
