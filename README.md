@@ -1,1 +1,2 @@
 # my-space
+<p> This is a Personal Space website with minimalistic design. It contains all the important contents in one place. I designed it basically to share it to someone so they can access all my social media accounts at one place. Got an idea to create a webpage like this from a YouTube Video I was watching. the video was about the story of Ru Siang Lin, a dark market site owner. </p>
