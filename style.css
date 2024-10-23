@@ -5,10 +5,11 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    cursor: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FFFFFF;
+    background-color: #fffdd0;
 }
 
 .container {
@@ -27,7 +28,7 @@ body {
     align-items: center;
     z-index: 2;
     width: 80%;
-    max-width: 300px;
+    max-width: 250px;
     aspect-ratio: 1 / 1;
     margin: 0 auto;
 }
@@ -48,6 +49,7 @@ h1 {
     font-weight: 700;
     color: #333333;
     text-align: center;
+    cursor: default;
 }
 
 .links-circle {
@@ -71,10 +73,11 @@ h1 {
     border-radius: 50%;
     overflow: hidden;
     transition: all 0.3s ease;
-    --angle: calc(var(--item-number) * (360deg / var(--total-links)));
+    --angle: calc((var(--item-number) * (360deg / var(--total-links))) + (-55deg));
     left: calc(50% + var(--radius) * cos(var(--angle)));
     top: calc(50% + var(--radius) * sin(var(--angle)));
     transform: translate(-50%, -50%);
+    perspective: 1000px; /* Add this for 3D effect */
 }
 
 .links-circle a img {
@@ -83,9 +86,28 @@ h1 {
     object-fit: cover;
 }
 
+/* Add these new rules for the images */
+.links-circle a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.links-circle a,
+.links-circle a img {
+    cursor: pointer; /* Changes cursor to pointer when hovering */
+}
+
 .links-circle a:hover {
     transform: translate(-50%, -50%) scale(1.1);
     animation: randomGlow 1.5s infinite;
+}
+
+.links-circle a:hover img {
+    transform: translateZ(50px) rotateY(360deg);
+    animation: popSpin 0.3s ease-out;
 }
 
 .links-circle a:nth-child(1) { --item-number: 0; }
@@ -166,5 +188,19 @@ h1 {
 @media (max-width: 480px) {
     .links-circle {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@keyframes popSpin {
+    0% {
+        transform: translateZ(0) rotateY(0);
+    }
+
+    50% {
+        transform: translateZ(100px) rotateY(180deg);
+    }
+
+    100% {
+        transform: translateZ(50px) rotateY(360deg);
     }
 }
