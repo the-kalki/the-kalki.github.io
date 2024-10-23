@@ -1,6 +1,3 @@
-
-// ... rest of your bubble creation code ...
-
 const bubblesContainer = document.querySelector(".bubbles");
 
 function createBubble(x, y) {
@@ -32,7 +29,7 @@ function createBubble(x, y) {
   const hue = Math.floor(Math.random() * 360); // Random hue
   const saturation = Math.floor(Math.random() * 30 + 70); // 70-100% saturation
   const lightness = Math.floor(Math.random() * 20 + 70); // 70-90% lightness
-  const alpha = Math.random() * 0.3 + 0.2; // 0.2-0.5 opacity
+  const alpha = Math.random() * 0.85 + 0.98; // 0.2-0.5 opacity
   bubble.style.backgroundColor = `hsla(${hue}, ${saturation}%, ${lightness}%, ${alpha})`;
 
   bubblesContainer.appendChild(bubble);
@@ -63,7 +60,23 @@ document.addEventListener("mousemove", (event) => {
   }
 });
 
-// Link Hover effects
+// Keyframes for the scattering effect
+const styleSheet = document.styleSheets[0];
+styleSheet.insertRule(
+  `
+@keyframes scatter {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--scatter-x), var(--scatter-y));
+        opacity: 0;
+    }
+}`,
+  styleSheet.cssRules.length
+);
+
 // Link Hover effects
 function getRandomColor() {
   const r = Math.floor(Math.random() * 256);
@@ -84,21 +97,3 @@ document.querySelectorAll(".links-circle a").forEach((link) => {
     link.style.animation = null;
   });
 });
-
-
-// Keyframes for the scattering effect
-const styleSheet = document.styleSheets[0];
-styleSheet.insertRule(
-  `
-@keyframes scatter {
-    0% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(var(--scatter-x), var(--scatter-y));
-        opacity: 0;
-    }
-}`,
-  styleSheet.cssRules.length
-);
