@@ -60,7 +60,6 @@ document.addEventListener("mousemove", (event) => {
   }
 });
 
-
 const overlay = document.getElementById('popupOverlay');
 const popupBox = document.getElementById('popupBox');
 const popupContent = document.getElementById('popupContent');
