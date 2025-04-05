@@ -4,16 +4,16 @@
 <head>
     <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="/style.css">
-    
+
     <!-- Character encoding -->
     <meta charset="UTF-8">
-    
+
     <!-- Viewport settings for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Document title -->
     <title>Prabahw's Space</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" href="/assets/logo.png" type="image/x-icon">
 </head>
@@ -23,13 +23,13 @@
         <div class="center-content">
             <!-- Logo image -->
             <img src="/assets/logo.png" alt="Logo" class="logo">
-            
+
             <div class="heading">
                 <!-- Main heading -->
                 <h1>Prabhaw's Space</h1>
             </div>
         </div>
-        
+
         <div class="links-circle">
             <!-- Social media links -->
             <a href="https://github.com/the-kalki" target="_blank">
@@ -52,12 +52,31 @@
             </a>
         </div>
     </div>
-    
+
     <!-- Bubbles effect -->
     <div class="bubbles"></div>
-    
+
     <!-- Link to external JavaScript file -->
     <script src="/script.js"></script>
+    <footer class="footer">
+        <a href="#" data-popup="terms">Terms & Conditions</a>
+        <a href="#" data-popup="privacy">Privacy Policy</a>
+        <a href="#" data-popup="contact">Contact</a>
+        <a href="#" data-popup="about">About</a>
+        <a href="#" data-popup="faq">FAQ</a>
+    </footer>
+
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-box" id="popupBox">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            <div id="popupContent" class="popup-content"></div>
+        </div>
+    </div>
+
+    <!-- Link to your external JS file here -->
+    <script src="main.js"></script>
+</body>
+
 </body>
 
 </html>

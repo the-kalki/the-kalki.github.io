@@ -60,6 +60,41 @@ document.addEventListener("mousemove", (event) => {
   }
 });
 
+
+const overlay = document.getElementById('popupOverlay');
+const popupBox = document.getElementById('popupBox');
+const popupContent = document.getElementById('popupContent');
+const closeBtn = document.getElementById('closeBtn');
+
+const contentMap = {
+  terms: "<h2>Terms & Conditions</h2><p>These are your terms...</p>",
+  privacy: "<h2>Privacy Policy</h2><p>We value your privacy...</p>",
+  contact: "<h2>Contact</h2><p>Email: contact@myspace.com<br>Phone: +91-9876543210</p>",
+  about: "<h2>About</h2><p>This is a portfolio/personal site built to showcase projects...</p>",
+  faq: "<h2>FAQ</h2><p><strong>Q:</strong> What is this?<br><strong>A:</strong> A personal space project!</p>"
+};
+
+document.querySelectorAll('[data-popup]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const key = e.target.getAttribute('data-popup');
+    popupContent.innerHTML = contentMap[key] || "<p>No content found.</p>";
+    overlay.style.display = 'flex';
+    popupBox.style.animation = 'slideUp 0.4s ease-out forwards';
+  });
+});
+
+overlay.addEventListener('click', (e) => {
+  if (e.target === overlay) {
+    overlay.style.display = 'none';
+  }
+});
+
+closeBtn.addEventListener('click', () => {
+  overlay.style.display = 'none';
+});
+
+
 // Keyframes for the scattering effect
 const styleSheet = document.styleSheets[0];
 styleSheet.insertRule(
