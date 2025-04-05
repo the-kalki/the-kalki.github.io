@@ -282,20 +282,3 @@ h1 {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-<<<<<<< HEAD
-=======
-
-@keyframes popSpin {
-    0% {
-        transform: translateZ(0) rotateY(0);
-    }
-
-    50% {
-        transform: translateZ(100px) rotateY(180deg);
-    }
-
-    100% {
-        transform: translateZ(50px) rotateY(360deg);
-    }
-}
->>>>>>> 9d6d3176acad2d9e7a82a289d0600d4bfec0b181
