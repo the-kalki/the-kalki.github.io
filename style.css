@@ -138,6 +138,31 @@ h1 {
     animation: bubbleAnim 3s infinite;
 }
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  z-index: 1000;
+}
+
+.footer a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+
 @keyframes bubbleAnim {
     0% {
         opacity: 0;
