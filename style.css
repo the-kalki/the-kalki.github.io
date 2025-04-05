@@ -138,7 +138,6 @@ h1 {
     animation: bubbleAnim 3s infinite;
 }
 
-<<<<<<< HEAD
 
 .footer {
     position: fixed;
@@ -230,32 +229,6 @@ h1 {
 .popup-content {
     margin-top: 2rem;
 }
-=======
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #111;
-  color: white;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 0.4rem 0;
-  font-size: 0.9rem;
-  z-index: 1000;
-}
-
-.footer a {
-  color: #aaa;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer a:hover {
-  color: #fff;
-}
-
->>>>>>> 9d6d3176acad2d9e7a82a289d0600d4bfec0b181
 
 @keyframes bubbleAnim {
     0% {
